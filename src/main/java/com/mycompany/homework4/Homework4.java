@@ -61,6 +61,7 @@ public class Homework4 {
         }
         
         //Task 2 - Uppercase File Converter
+        File fileName = new File("");
         
         
         //Task 3 - Weekday or Weekend
