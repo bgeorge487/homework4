@@ -5,8 +5,7 @@
 package com.mycompany.homework4;
 
 import java.util.Scanner;
-import java.io.PrintWriter;
-import java.io.File;
+import java.io.*;
 
 /**
  * Task 1. Sum of Numbers
@@ -43,7 +42,7 @@ import java.io.File;
  */
 public class Homework4 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         //Task 1 - Sum of numbers
         
@@ -57,12 +56,38 @@ public class Homework4 {
             while(numUser >= 0){
                 sum += numUser--;
             }
-            System.out.println("The sum of all numbers is: " + sum);
+            System.out.println("The sum of all numbers is: " + sum + "\n");
         }
         
         //Task 2 - Uppercase File Converter
-        File fileName = new File("");
+     
+        //Read from first file -> Change content to caps -> Write to second file
         
+        //Step 1 Get two filenames from a user
+        System.out.println("Please enter a file to read from: ");
+        Scanner readingFile = new Scanner(System.in);
+        String fileOne = readingFile.nextLine(); //readingFile.txt
+        
+        System.out.println("Please enter a file to write to: ");
+        Scanner writingFile = new Scanner(System.in);
+        String fileTwo = writingFile.nextLine(); //writingFile.txt
+        
+        //Step 2 Open the first file for reading
+        File read = new File(fileOne);
+        Scanner readFile = new Scanner(read);
+        
+        //Step 3 Change all characters to upper case
+        while(readFile.hasNext()){
+            String str = readFile.nextLine().toUpperCase();
+            //Step 4 Write the upper case content to the second file
+            PrintWriter pw = new PrintWriter(fileTwo);
+            pw.println(str.toUpperCase());
+            pw.close();
+        }
+        readFile.close();
+        
+        //Step 5 Print out a confirmation to the console for the user
+        System.out.println("Completed successfully. \n");
         
         //Task 3 - Weekday or Weekend
         Scanner day = new Scanner(System.in);
