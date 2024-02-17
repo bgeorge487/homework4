@@ -53,7 +53,7 @@ public class Homework4 {
         
         if(numUser > 0){
             int sum = 0;
-            while(numUser > 0){
+            while(numUser >= 0){
                 sum += numUser--;
             }
             System.out.println("The sum of all numbers is: " + sum + "\n");
