@@ -53,7 +53,7 @@ public class Homework4 {
         
         if(numUser > 0){
             int sum = 0;
-            while(numUser >= 0){
+            while(numUser > 0){
                 sum += numUser--;
             }
             System.out.println("The sum of all numbers is: " + sum + "\n");
@@ -96,25 +96,25 @@ public class Homework4 {
         
         switch(dayInput){
             case "monday":
-                System.out.println("It's a weekday!");
+                System.out.println(dayInput + " is a weekday!");
                 break;
             case "tuesday":
-                System.out.println("It's a weekday!");
+                System.out.println(dayInput + " is a weekday!");
                 break;
             case "wednesday":
-                System.out.println("It is Wednesday my dude. (Also a weekday!)");
+                System.out.println(dayInput + " is a weekday!" + "(It is Wednesday my dude.)");
                 break;
             case "thursday":
-                System.out.println("It's a weekday!");
+                System.out.println(dayInput + " is a weekday!");
                 break;
             case "friday":
-                System.out.println("It's a weekday!");
+                System.out.println(dayInput + " is a weekday!");
                 break;
             case "saturday":
-                System.out.println("It's a weekend day!");
+                System.out.println(dayInput + " is a weekend day!");
                 break;
             case "sunday":
-                System.out.println("It's a weekend day!");
+                System.out.println(dayInput + " is a weekend day!");
                 break;
             default:
                 System.out.println("Please enter in a valid day");
